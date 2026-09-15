@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#471b1b">
+  <meta name="description" content="Интерактивная рабочая станция SRE / Platform-инженера Льва Ильичёва. Инфраструктура, надёжность и немного ностальгии.">
+  <title>Лев Ильичёв / SRE workstation</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect x='3' y='7' width='58' height='46' rx='10' fill='%239d3d35'/%3E%3Crect x='10' y='14' width='44' height='30' rx='6' fill='%23211e16'/%3E%3Cpath d='m20 24 8 6-8 6m14 0h10' fill='none' stroke='%23edb870' stroke-width='3'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <svg class="crt-filter-defs" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <filter id="crt-curvature" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
+        <feImage id="crt-map" result="curvature" x="0" y="0" width="100%" height="100%" preserveAspectRatio="none"/>
+        <feDisplacementMap id="crt-displacement" in="SourceGraphic" in2="curvature" scale="0" xChannelSelector="R" yChannelSelector="G"/>
+      </filter>
+    </defs>
+  </svg>
+  <div class="ambient" aria-hidden="true"></div>
+  <main class="workstation">
+    <header class="desk-header"><a class="wordmark" href="/" tabindex="-1" aria-label="ILYICHEV workstation">ЛИ<span>®</span></a><span>PERSONAL WORKSTATION / VOL. 01</span><span class="header-right"><i></i> BUILT TO STAY ONLINE</span></header>
+    <section class="monitor" aria-label="Красный CRT-монитор">
+      <div class="shell-top" aria-hidden="true"><span>ILYICHEV SYSTEMS</span><span>COLOR DISPLAY TERMINAL · LI–01</span></div>
+      <div class="bezel">
+        <div class="screen powered-off" id="screen">
+          <div class="crt-surface" id="crt-surface">
+          <div class="screen-content" id="screen-content" inert>
+            <header class="system-bar"><span><span class="tiny-logo">▧</span> ILYICHEV_OS <small>v.2.6.0</small></span><span class="connection"><i></i> SECURE CONNECTION</span><time id="clock">00:00:00</time></header>
+            <nav class="navigation" aria-label="Разделы портфолио" role="tablist">
+              <button type="button" role="tab" id="tab-0" aria-controls="panel-0" aria-selected="true" data-section="0"><span>01</span> ПРОФИЛЬ</button>
+              <button type="button" role="tab" id="tab-1" aria-controls="panel-1" aria-selected="false" data-section="1"><span>02</span> СТЕК</button>
+              <button type="button" role="tab" id="tab-2" aria-controls="panel-2" aria-selected="false" data-section="2"><span>03</span> ПРОЕКТЫ</button>
+              <button type="button" role="tab" id="tab-3" aria-controls="panel-3" aria-selected="false" data-section="3"><span>04</span> ОПЫТ</button>
+              <button type="button" role="tab" id="tab-4" aria-controls="panel-4" aria-selected="false" data-section="4"><span>05</span> КОНТАКТ</button>
+            </nav>
+            <div class="panels" id="panels">
+              <section class="panel profile" role="tabpanel" id="panel-0" aria-labelledby="tab-0">
+                <div class="profile-main">
+                  <p class="eyebrow"><span class="status-square"></span> ЧЕЛОВЕК ЗА ИНФРАСТРУКТУРОЙ</p>
+                  <h1>ЛЕВ<br>ИЛЬИЧЁВ<span class="cursor">_</span></h1>
+                  <div class="role">SRE<span> / </span>DEVOPS<span> / </span>PLATFORM ENGINEER</div>
+                  <p class="intro">Строю платформы, которые не будят по ночам.<br>И держу инфраструктуру под контролем.</p>
+                  <p class="description">Перевёл инфраструктуру с облачных SaaS на on-prem<br class="desktop-break"> и сократил косты. От сети до observability — сам.</p>
+                  <div class="profile-tags"><span>LINUX AT HEART</span><span>ON-PREM BY DEFAULT</span></div>
+                </div>
+                <aside class="profile-side" aria-label="Состояние системы">
+                  <div class="graphic-label"><span>INFRASTRUCTURE MAP</span><span>LIVE <i></i></span></div>
+                  <div class="radar" aria-hidden="true">
+                    <svg viewBox="0 0 300 246" fill="none"><defs><pattern id="dots" width="15" height="15" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r=".65" fill="currentColor" opacity=".25"/></pattern></defs><rect width="300" height="246" fill="url(#dots)"/><g stroke="currentColor"><ellipse cx="150" cy="121" rx="91" ry="91" opacity=".35"/><ellipse cx="150" cy="121" rx="91" ry="33" opacity=".4"/><ellipse cx="150" cy="121" rx="47" ry="91" opacity=".4"/><path d="M59 121h182M150 30v182M78 68h144M78 175h144" opacity=".3"/><path d="m150 58 53 29v62l-53 30-53-30V87z" fill="#232219"/><path d="m150 58 53 29-53 31-53-31 53-29Zm0 60v61m-53-92 53 31 53-31"/><path d="m150 78 20 11-20 12-20-12 20-11Z" fill="currentColor" opacity=".6"/><path d="M115 122v15m10-10v15m50-17 10-6m-10 18 10-6" stroke-width="3"/><path d="M59 121H26v66h44m171-66h34V56h-44M150 30V13m0 199v21" stroke-dasharray="3 4" opacity=".7"/><rect x="19" y="113" width="14" height="14" fill="#232219"/><rect x="268" y="113" width="14" height="14" fill="#232219"/><circle cx="150" cy="30" r="3" fill="currentColor"/><circle cx="150" cy="212" r="3" fill="currentColor"/><path d="M10 25V9h16m248 0h16v16M10 221v16h16m248 0h16v-16" opacity=".5"/></g><g fill="currentColor" font-size="8" font-family="monospace" opacity=".65"><text x="35" y="206">NODE_01</text><text x="224" y="43">NODE_02</text><text x="109" y="243">ALL SYSTEMS NOMINAL</text></g></svg>
+                    <div class="radar-sweep"></div>
+                  </div>
+                  <div class="system-check"><span>СИСТЕМА</span><strong><i></i> СТАБИЛЬНА</strong></div>
+                  <div class="system-check"><span>ЛОКАЦИЯ</span><strong>МОСКВА / UTC+3</strong></div>
+                  <div class="system-check"><span>СТАТУС</span><strong>SRE @ GENOMED</strong></div>
+                </aside>
+                <div class="stats"><div><strong>3.5</strong><span>ГОДА В ИНФРАСТРУКТУРЕ</span></div><div><strong>500<span>+</span></strong><span>ПОЛЬЗОВАТЕЛЕЙ В SSO</span></div><div><strong>~3<span> МИН</span></strong><span>ОТ ЗАЯВКИ ДО PROD</span></div><div class="stat-note">МЕНЬШЕ КОСТ.<br>БОЛЬШЕ КОНТРОЛЯ.<span>↓ SAAS → ON-PREM</span></div></div>
+              </section>
+              <section class="panel" role="tabpanel" id="panel-1" aria-labelledby="tab-1" hidden>
+                <p class="eyebrow">/ 02 · ИНСТРУМЕНТЫ</p><h2>МОЙ РАБОЧИЙ СТЕК<span>_</span></h2><p class="section-intro">Проверенные инструменты. Воспроизводимые результаты.</p>
+                <div class="stack-grid"><article><span class="card-index">[01] INFRASTRUCTURE</span><h3>Основа системы</h3><p>Linux: Ubuntu · Debian<br>Red Hat · Alma · Proxmox</p><div class="meter"><span style="width:94%"></span></div><small>ОТ BARE METAL ДО КОНТЕЙНЕРА</small></article><article><span class="card-index">[02] CONTAINERS</span><h3>Пакет и оркестрация</h3><p>Docker · Kubernetes<br>Git · CI/CD</p><div class="meter"><span style="width:90%"></span></div><small>GIT PUSH → СПОКОЙНЫЙ РЕЛИЗ</small></article><article><span class="card-index">[03] NETWORKING</span><h3>Сеть от края до края</h3><p>TCP/IP · NAT · маршрутизация<br>узлы в ЦОД · CDN</p><div class="meter"><span style="width:92%"></span></div><small>ОТ NAT ДО ГЛОБАЛЬНОЙ СЕТИ</small></article><article><span class="card-index">[04] OBSERVABILITY &amp; IDENTITY</span><h3>Видно всё и всех</h3><p>Prometheus · Grafana<br>AD · IdP / SSO · Go · Python</p><div class="meter"><span style="width:89%"></span></div><small>УВИДЕТЬ РАНЬШЕ, ЧЕМ ПОЛЬЗОВАТЕЛЬ</small></article></div>
+              </section>
+              <section class="panel" role="tabpanel" id="panel-2" aria-labelledby="tab-2" hidden>
+                <p class="eyebrow">/ 03 · SELECTED WORK</p><h2>СОБРАНО. ЗАПУЩЕНО.<span>_</span></h2><p class="section-intro">Листайте стрелками <kbd>↑</kbd> <kbd>↓</kbd> на пульте — выбранный проект крупнее.</p>
+                <div class="reel" id="reel" role="listbox" aria-label="Проекты"></div>
+                <div class="reel-detail" id="reel-detail"></div>
+              </section>
+              <section class="panel" role="tabpanel" id="panel-3" aria-labelledby="tab-3" hidden>
+                <p class="eyebrow">/ 04 · CHANGELOG</p><h2>ПУТЬ В СИСТЕМЕ<span>_</span></h2><p class="section-intro">От первого сервера до инфраструктуры, которой доверяют.</p>
+                <div class="timeline"><article><span>2026 — СЕЙЧАС</span><div><span class="card-index">GENOMED</span><h3>SRE / Platform Engineer</h3><p>Инфраструктура на 20 нодах Proxmox: бэкапы, наблюдаемость, zero-trust на 500+ человек, self-service провижининг и платформа логов с AI-наблюдателем. Перевожу сервисы с SaaS на on-prem.</p><small>PROXMOX · SSO · SIEM · CI/CD</small></div></article><article><span>2025 — 2026</span><div><span class="card-index">MOREVIEW</span><h3>DevOps Engineer</h3><p>Сократил время релиза через CI/CD. Настроил наблюдаемость в распределённом монолите — от метрик до трассировок.</p><small>CI/CD · OBSERVABILITY · DOCKER</small></div></article><article><span>2023 — 2025</span><div><span class="card-index">ФРИЛАНС / ПРОЕКТЫ</span><h3>Infrastructure / DevOps</h3><p>Проектная работа: инфраструктура, автоматизация, сети и мониторинг под конкретные задачи заказчиков.</p><small>LINUX · DOCKER · ANSIBLE</small></div></article><article><span>2023</span><div><span class="card-index">РАЙФФАЙЗЕНБАНК</span><h3>Стажёр · Инфраструктура</h3><p>Полгода стажировки: боевая эксплуатация, сети и первые продакшн-сервисы. Здесь научился читать логи раньше, чем пить утренний кофе.</p><small>LINUX · NETWORKING</small></div></article></div>
+              </section>
+              <section class="panel contact-panel" role="tabpanel" id="panel-4" aria-labelledby="tab-4" hidden>
+                <p class="eyebrow"><span class="status-square"></span> / 05 · КАНАЛ СВЯЗИ ОТКРЫТ</p><h2>НА СВЯЗИ<br>ПО ДЕЛУ<span>_</span></h2><p class="section-intro">Про инфраструктуру, сложные задачи<br>или просто по технологиям — пишите.</p>
+                <div class="contact-card"><span>EMAIL</span><strong>gordon19009@gmail.com</strong><button type="button" id="copy-email">[ SPACE ] СКОПИРОВАТЬ</button></div>
+                <div class="contact-details"><div><span>ЛОКАЦИЯ</span><strong>МОСКВА, UTC+3</strong></div><div><span>ФОРМАТ РАБОТЫ</span><strong>REMOTE / ГИБРИД</strong></div><div><span>ОБЫЧНО ОТВЕЧАЮ</span><strong>В ТЕЧЕНИЕ 24 ЧАСОВ</strong></div></div>
+              </section>
+            </div>
+            <footer class="terminal-footer"><span><span class="prompt">›</span> <span id="terminal-command">whoami</span><span class="terminal-cursor">█</span></span><span id="page-label">01 / 05</span><span class="footer-status" id="terminal-status" role="status" aria-live="polite">READY. ЖДУ КОМАНДУ.</span></footer>
+          </div>
+          <div class="boot-overlay" id="boot-overlay" aria-live="polite" hidden><span class="boot-brand">ILYICHEV<br>SYSTEMS<span>®</span></span><div id="boot-lines"></div><div class="boot-progress"><span></span></div><span class="boot-hint">ЗАГРУЗКА СИСТЕМЫ…</span></div>
+          <div class="off-overlay" id="off-overlay"><span>СИСТЕМА ВЫКЛЮЧЕНА</span><strong>SPACE — ВКЛЮЧИТЬ</strong></div>
+          <div class="raster-lines" aria-hidden="true"></div>
+          </div>
+          <div class="glass" aria-hidden="true"></div>
+        </div>
+      </div>
+      <div class="monitor-bottom"><div class="brand">ильичёв<span>®</span><small>PERSONAL COMPUTER</small></div><div class="vents" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="hardware"><span class="model-name">LI–01<br><small>CHROMATIC SERIES</small></span><button type="button" id="sound" class="sound-button" aria-label="Включить звук" aria-pressed="false">SOUND <span id="sound-label">OFF</span></button><span class="power-led" id="power-led"></span><button type="button" class="power-button" id="power" aria-label="Выключить монитор" aria-pressed="true">⏻</button></div></div>
+    </section>
+    <div class="stand" aria-hidden="true"><div></div></div>
+    <footer class="desk-footer"><div class="key-guide"><span><kbd>1</kbd>–<kbd>5</kbd> РАЗДЕЛЫ</span><span><kbd>↑</kbd><kbd>↓</kbd> ЛИСТАТЬ ПРОЕКТЫ</span><span><kbd>TAB</kbd> ВЫБОР ДЕЙСТВИЯ</span><span><kbd>SPACE</kbd> ВКЛЮЧЕНИЕ / ДЕЙСТВИЕ</span></div><div class="desk-note"><span>МЫШЬ МОЖЕТ ОТДОХНУТЬ.</span><span>© 2026 ЛЕВ ИЛЬИЧЁВ · ILYICHEV SYSTEMS</span></div></footer>
+  </main>
+</body>
+</html>
